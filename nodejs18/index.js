@@ -1,5 +1,6 @@
-module.exports = function (context) {
-  context.res.send({
-    message: "hello world!",
-  });
+module.exports = function (event) {
+  return {
+    statusCode: 200,
+    body: 'hello world!',
+  }
 };
