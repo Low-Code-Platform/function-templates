@@ -7,10 +7,10 @@ event object is passed to function from workspace or serverless provider. here i
 
 ```json
 {
-    body: "request body object or string - only in http calls",
-    headers: "request headers as a key value objcet - only in http calls",
-    params: "query parameters as a key value object - only in http calls",
-    message: "message string - in websocket, queue and non-http calls"
+    "body": "request body object or string - only in http calls",
+    "headers": "request headers as a key value objcet - only in http calls",
+    "params": "query parameters as a key value object - only in http calls",
+    "message": "message string - in websocket, queue and non-http calls"
 }
 ```
 
@@ -33,7 +33,7 @@ here is an example call for an http call:
     },
     "params": {
         "key1": "value1",
-        "key2": "value2
+        "key2": "value2"
     }
 }
 ```
@@ -55,16 +55,16 @@ here is an example response payload for it:
 for successful responses
 ```json
 {
-    statusCode: 200,
-    body: "a successful response"
+    "statusCode": 200,
+    "body": "a successful response"
 }
 ```
 
 for failures
 ```json
 {
-    statusCode: 500,
-    body: "something went wrong"
+    "statusCode": 500,
+    "body": "something went wrong"
 }
 ```
 
@@ -73,7 +73,7 @@ body value can be also json stringified for http response usage, for example:
 for http calls
 ```json
 {
-    statusCode: 200,
-    body: "{\"foo\": \"bar\"}"
+    "statusCode": 200,
+    "body": "{\"foo\": \"bar\"}"
 }
 ```
