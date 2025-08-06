@@ -1,11 +1,11 @@
 public class Handler
 {
-    public Response HandleEvent(Event inputEvent)
+    public static Response HandleEvent(Event inputEvent)
     {
         return new Response
         {
             StatusCode = 200,
-            Body = "hello world"
+            Body = "{\"msg\": \"hello world\"}"
         };
     }
 }
